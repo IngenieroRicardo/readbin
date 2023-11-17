@@ -1,2 +1,2 @@
 # Lector Binario
-Analizador de archivos binarios
+Analizador de archivos binarios.
