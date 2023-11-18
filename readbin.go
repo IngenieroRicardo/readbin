@@ -26,18 +26,21 @@ func main(){
         log.Fatal(err)
     }
     for i := 0; i < count; i++ {
-        fmt.Print("Bin[",i,"]=",fmt.Sprintf("%08b", data[i]))
-        fmt.Print("  Hex[",i,"]=",fmt.Sprintf("0x%02x", data[i]))
-        fmt.Print("  ASCII[",i,"]=",fmt.Sprintf("%v", data[i]))
-        fmt.Print("\tChar[",i,"]=",fmt.Sprintf("%c", data[i]))
-        fmt.Println(" ")
+    	fmt.Print("Bin[",i,"]=",fmt.Sprintf("%08b", data[i]))
+		fmt.Print("  Hex[",i,"]=",fmt.Sprintf("0x%02x", data[i]))
+		fmt.Print("  ASCII[",i,"]=",fmt.Sprintf("%v", data[i]))
+    	if ( data[i] != 144 && data[i] != 152 ){    	
+        	fmt.Print("\tChar[",i,"]=",fmt.Sprintf("%c", data[i]),"\n")
+        } else {
+        	fmt.Print("\tChar[",i,"]= \n")
+        }
     }
     fmt.Print("\n\nSTRING: \n\n");
     for i := 0; i < count; i++ {
 
         if ( data[i] != 0 ){
             if unicode.IsDigit(rune(data[i])) || unicode.IsLetter(rune(data[i])) || unicode.IsSymbol(rune(data[i]))  {
-                fmt.Printf("%c", data[i])
+                fmt.Print(fmt.Sprintf("%c", data[i]))
             } else {
                 fmt.Print(" ")
             }
