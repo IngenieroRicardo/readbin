@@ -26,9 +26,9 @@ func main(){
         log.Fatal(err)
     }
     for i := 0; i < count; i++ {
-    	fmt.Print("Bin[",i,"]=",fmt.Sprintf("%08b", data[i]))
-		fmt.Print("  Hex[",i,"]=",fmt.Sprintf("0x%02x", data[i]))
-		fmt.Print("  ASCII[",i,"]=",fmt.Sprintf("%v", data[i]))
+	fmt.Print("Bin[",i,"]=",fmt.Sprintf("%08b", data[i]))
+	fmt.Print("  Hex[",i,"]=",fmt.Sprintf("0x%02x", data[i]))
+	fmt.Print("  ASCII[",i,"]=",fmt.Sprintf("%v", data[i]))
     	if ( data[i] != 144 && data[i] != 152 ){    	
         	fmt.Print("\tChar[",i,"]=",fmt.Sprintf("%c", data[i]),"\n")
         } else {
