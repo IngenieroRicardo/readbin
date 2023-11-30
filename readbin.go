@@ -40,7 +40,9 @@ func main(){
         if ( data[i] != 0 ){
             if unicode.IsDigit(rune(data[i])) || unicode.IsLetter(rune(data[i])) || unicode.IsSymbol(rune(data[i]))  {
                 fmt.Print(fmt.Sprintf("%c", data[i]))
-            } else {
+            } else if(data[i]==46){ 
+                fmt.Print(".")
+            }else {
                 fmt.Print(" ")
             }
         }
@@ -48,4 +50,3 @@ func main(){
     file.Close()
     fmt.Print("\n\nFIN DEL ANALISIS...\n\n");
 }
-
