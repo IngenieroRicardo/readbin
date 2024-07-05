@@ -38,7 +38,7 @@ func main(){
     fmt.Print("\n\nSTRING: \n\n");
     for i := 0; i < count; i++ {
         if ( data[i] != 0 ){
-            if unicode.IsDigit(rune(data[i])) || unicode.IsLetter(rune(data[i])) || unicode.IsSymbol(rune(data[i]))  {
+            if unicode.IsDigit(rune(data[i])) || unicode.IsLetter(rune(data[i])) || unicode.IsSymbol(rune(data[i])) || data[i]==64 {
                 fmt.Print(fmt.Sprintf("%c", data[i]))
             } else if(data[i]==46){ 
                 fmt.Print(".")
